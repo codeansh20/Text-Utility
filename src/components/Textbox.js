@@ -65,7 +65,7 @@ export default function Textbox(props) {
     <div className='textBoxInfo'>
       <h1>The content inside your textbox</h1>
       <p className={`text-${props.text}`}>Have {text.split(' ').filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
-      <p className={`text-${props.text}`}>Time to read the content is {0.008*(text.split(' ').length-1)} minute</p>
+      <p className={`text-${props.text}`}>Time to read the content is {0.008*(text.split(' ').filter((element)=>{return element.length!==0}).length)} minute</p>
     </div>
      <div id='previewbox'className={`previewInfo text-${props.text}`}>
       <h2>Preview:</h2>
